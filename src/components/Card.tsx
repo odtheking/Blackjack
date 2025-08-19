@@ -11,8 +11,8 @@ interface CardProps {
 
 const Card: React.FC<CardProps> = ({ card, hidden = false }) => {
     const cardImagePath = hidden
-        ? `src/assets/cards/back.png`
-        : `src/assets/cards/${card.rank || card.rank.toLowerCase()}_of_${card.suit.toLowerCase()}.png`
+        ? `public/cards/back.png`
+        : `public/cards/${card.rank || card.rank.toLowerCase()}_of_${card.suit.toLowerCase()}.png`
 
     return (
         <div className={`${hidden ? 'hidden-card' : 'playing-card'}`}>
