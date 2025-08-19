@@ -1,2 +1,0 @@
-# Blackjack
-Simple Blackjack implementation
