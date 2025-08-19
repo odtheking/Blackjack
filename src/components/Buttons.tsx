@@ -18,6 +18,7 @@ const Buttons: React.FC<IButtons> =
                 <button className="button" onClick={onHit} disabled={loading}>{'Hit'}</button>
                 {canDouble && (<button className="button" onClick={onDouble} disabled={loading}>{'Double'}</button>)}
                 <button className="button" onClick={onStand} disabled={loading}>{'Stand'}</button>
+                <button className="button" onClick={onStartGame} disabled={loading}>{'Restart'}</button>
             </div>
         )
     } else {

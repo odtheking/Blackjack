@@ -1,6 +1,6 @@
 import type { GameState } from '../types/types'
 
-const API_BASE = 'https://blackjack-backend-1-7g84.onrender.com'
+const API_BASE = 'http://localhost:5555'
 
 export const startGame = async (): Promise<GameState> => {
     const response = await fetch(`${API_BASE}/game/start`, { method: 'POST' })
