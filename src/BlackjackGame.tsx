@@ -67,6 +67,11 @@ const BlackjackGame: React.FC = () => {
         await handleStart()
     }
 
+    const reset = () => {
+        setGameState(null)
+        localStorage.removeItem("blackjack")
+    }
+
     return (
         <div className="container">
             {!gameState ? (
@@ -89,7 +94,6 @@ const BlackjackGame: React.FC = () => {
                         />
                     </div>
 
-
                     <Buttons
                         gameInProgress={gameState?.gameStatus === 'In Progress'}
                         onHit={handleHit}
@@ -98,6 +102,7 @@ const BlackjackGame: React.FC = () => {
                         onStartGame={handleStart}
                         loading={loading}
                         canDouble={gameState.playerHand.cards.length === 2 && gameState?.gameStatus === 'In Progress'}
+                        onReset={reset}
                     />
                 </>
             )}
